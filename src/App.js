@@ -38,43 +38,45 @@ function App() {
   }
 
   return (
-    <div className="App_">
-      <div className="header">
-        <h1 className="header_text">
-          Text <span className="text_active">Summariser</span>
-        </h1>
-        <h2 className="header_summary"> Summarise your text</h2>
-      </div>
-      <div className="container">
-        <div className="text_form">
-          <form>
-            <label>Enter your text</label>
+    <section>
+      <div className="App_">
+        <div className="header">
+          <h1 className="header_text">
+            Text <span className="text_active">Summariser</span>
+          </h1>
+          <h2 className="header_summary"> Summarise your text</h2>
+        </div>
+        <div className="container">
+          <div className="text_form">
+            <form>
+              <label>Enter your text</label>
+              <textarea
+                rows={14}
+                cols={80}
+                placeholder="Text to be summarised"
+                value={text}
+                onChange={(e) => setText(e.target.value)}
+              />
+            </form>
+          </div>
+          <div>
+            <button type="button" onClick={handleSubmit}>
+              {loading ? "loading..." : "Summarise"}
+            </button>
+          </div>
+          <div className="summarised_text">
+            <label>Summarised text</label>
             <textarea
+              placeholder="Summarised text"
               rows={14}
               cols={80}
-              placeholder="Text to be summarised"
-              value={text}
+              value={summarisedText}
               onChange={(e) => setText(e.target.value)}
             />
-          </form>
-        </div>
-        <div>
-          <button type="button" onClick={handleSubmit}>
-            {loading ? "loading..." : "Summarise"}
-          </button>
-        </div>
-        <div className="summarised_text">
-          <label>Summarised text</label>
-          <textarea
-            placeholder="Summarised text"
-            rows={14}
-            cols={80}
-            value={summarisedText}
-            onChange={(e) => setText(e.target.value)}
-          />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

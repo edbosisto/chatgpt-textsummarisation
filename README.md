@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# ChatGPT - Text Summariser
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This ChatGPT Text Summariser uses the OpenAI ChatGPT API to summarise a body of text into simple, separate lines.
+- Follow the directions below to use the application on your local machine.
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
